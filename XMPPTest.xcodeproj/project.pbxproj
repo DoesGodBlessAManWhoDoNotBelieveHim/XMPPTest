@@ -10,7 +10,6 @@
 		787A00DB1B8ACFB600810B9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A00DA1B8ACFB600810B9B /* main.m */; };
 		787A00DE1B8ACFB600810B9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A00DD1B8ACFB600810B9B /* AppDelegate.m */; };
 		787A00E11B8ACFB600810B9B /* XMPPTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 787A00DF1B8ACFB600810B9B /* XMPPTest.xcdatamodeld */; };
-		787A00E41B8ACFB600810B9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A00E31B8ACFB600810B9B /* ViewController.m */; };
 		787A00E71B8ACFB600810B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787A00E51B8ACFB600810B9B /* Main.storyboard */; };
 		787A00E91B8ACFB600810B9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787A00E81B8ACFB600810B9B /* Images.xcassets */; };
 		787A00EC1B8ACFB600810B9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787A00EA1B8ACFB600810B9B /* LaunchScreen.xib */; };
@@ -167,6 +166,13 @@
 		78D715CE1B8AD2530001A1D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D715CD1B8AD2530001A1D7 /* UIKit.framework */; };
 		78D715D01B8AD25A0001A1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D715CF1B8AD25A0001A1D7 /* Foundation.framework */; };
 		78D715D21B8AD2610001A1D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D715D11B8AD2610001A1D7 /* CoreLocation.framework */; };
+		78D715DC1B8AEB000001A1D7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D715DB1B8AEB000001A1D7 /* Login.storyboard */; };
+		78D715DE1B8AEB110001A1D7 /* Regist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D715DD1B8AEB110001A1D7 /* Regist.storyboard */; };
+		78D715E01B8AEBFD0001A1D7 /* Leader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D715DF1B8AEBFD0001A1D7 /* Leader.storyboard */; };
+		78D715E41B8AF0850001A1D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D715E31B8AF0850001A1D7 /* ViewController.m */; };
+		78D715E71B8AF0B20001A1D7 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D715E61B8AF0B20001A1D7 /* RootNavigationController.m */; };
+		78D715EA1B8AF0F10001A1D7 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D715E91B8AF0F10001A1D7 /* MainTabBarController.m */; };
+		78D715F01B8AF47D0001A1D7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D715EF1B8AF47D0001A1D7 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,8 +192,6 @@
 		787A00DC1B8ACFB600810B9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		787A00DD1B8ACFB600810B9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		787A00E01B8ACFB600810B9B /* XMPPTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XMPPTest.xcdatamodel; sourceTree = "<group>"; };
-		787A00E21B8ACFB600810B9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		787A00E31B8ACFB600810B9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		787A00E61B8ACFB600810B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		787A00E81B8ACFB600810B9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		787A00EB1B8ACFB600810B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -500,6 +504,17 @@
 		78D715CF1B8AD25A0001A1D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78D715D11B8AD2610001A1D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		78D715D31B8AE5F40001A1D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		78D715DB1B8AEB000001A1D7 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		78D715DD1B8AEB110001A1D7 /* Regist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Regist.storyboard; sourceTree = "<group>"; };
+		78D715DF1B8AEBFD0001A1D7 /* Leader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leader.storyboard; sourceTree = "<group>"; };
+		78D715E21B8AF0850001A1D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		78D715E31B8AF0850001A1D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		78D715E51B8AF0B20001A1D7 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		78D715E61B8AF0B20001A1D7 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
+		78D715E81B8AF0F10001A1D7 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		78D715E91B8AF0F10001A1D7 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		78D715EE1B8AF47D0001A1D7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		78D715EF1B8AF47D0001A1D7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,13 +567,14 @@
 		787A00D71B8ACFB600810B9B /* XMPPTest */ = {
 			isa = PBXGroup;
 			children = (
+				78D715D31B8AE5F40001A1D7 /* PrefixHeader.pch */,
 				787A00DC1B8ACFB600810B9B /* AppDelegate.h */,
 				787A00DD1B8ACFB600810B9B /* AppDelegate.m */,
-				78D715D31B8AE5F40001A1D7 /* PrefixHeader.pch */,
+				78D715D61B8AE9A60001A1D7 /* Models */,
+				78D715D71B8AE9A60001A1D7 /* Views */,
+				78D715D41B8AE9A60001A1D7 /* Controllers */,
+				78D715D51B8AE9A60001A1D7 /* Helpers */,
 				78D713BB1B8AD05A0001A1D7 /* 3rdSources */,
-				787A00E21B8ACFB600810B9B /* ViewController.h */,
-				787A00E31B8ACFB600810B9B /* ViewController.m */,
-				787A00E51B8ACFB600810B9B /* Main.storyboard */,
 				787A00E81B8ACFB600810B9B /* Images.xcassets */,
 				787A00EA1B8ACFB600810B9B /* LaunchScreen.xib */,
 				787A00DF1B8ACFB600810B9B /* XMPPTest.xcdatamodeld */,
@@ -1497,6 +1513,78 @@
 			path = libidn;
 			sourceTree = "<group>";
 		};
+		78D715D41B8AE9A60001A1D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				78D715EB1B8AF18C0001A1D7 /* Login */,
+				78D715EC1B8AF18C0001A1D7 /* Other */,
+				78D715ED1B8AF18C0001A1D7 /* Regist */,
+				78D715E11B8AF0850001A1D7 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		78D715D51B8AE9A60001A1D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		78D715D61B8AE9A60001A1D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78D715D71B8AE9A60001A1D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				787A00E51B8ACFB600810B9B /* Main.storyboard */,
+				78D715DB1B8AEB000001A1D7 /* Login.storyboard */,
+				78D715DD1B8AEB110001A1D7 /* Regist.storyboard */,
+				78D715DF1B8AEBFD0001A1D7 /* Leader.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78D715E11B8AF0850001A1D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				78D715E21B8AF0850001A1D7 /* ViewController.h */,
+				78D715E31B8AF0850001A1D7 /* ViewController.m */,
+				78D715E51B8AF0B20001A1D7 /* RootNavigationController.h */,
+				78D715E61B8AF0B20001A1D7 /* RootNavigationController.m */,
+				78D715E81B8AF0F10001A1D7 /* MainTabBarController.h */,
+				78D715E91B8AF0F10001A1D7 /* MainTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		78D715EB1B8AF18C0001A1D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				78D715EE1B8AF47D0001A1D7 /* LoginViewController.h */,
+				78D715EF1B8AF47D0001A1D7 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		78D715EC1B8AF18C0001A1D7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		78D715ED1B8AF18C0001A1D7 /* Regist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Regist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1579,7 +1667,10 @@
 			files = (
 				78D715BD1B8AD05A0001A1D7 /* build-libidn.sh in Resources */,
 				787A00E71B8ACFB600810B9B /* Main.storyboard in Resources */,
+				78D715DC1B8AEB000001A1D7 /* Login.storyboard in Resources */,
+				78D715DE1B8AEB110001A1D7 /* Regist.storyboard in Resources */,
 				787A00EC1B8ACFB600810B9B /* LaunchScreen.xib in Resources */,
+				78D715E01B8AEBFD0001A1D7 /* Leader.storyboard in Resources */,
 				78D715B81B8AD05A0001A1D7 /* README.txt in Resources */,
 				787A00E91B8ACFB600810B9B /* Images.xcassets in Resources */,
 			);
@@ -1612,6 +1703,7 @@
 				78D715761B8AD05A0001A1D7 /* XMPPvCardTempModule.m in Sources */,
 				78D715AE1B8AD05A0001A1D7 /* XMPPTimer.m in Sources */,
 				78D715BB1B8AD05A0001A1D7 /* DDXMLElement.m in Sources */,
+				78D715E71B8AF0B20001A1D7 /* RootNavigationController.m in Sources */,
 				78D7156C1B8AD05A0001A1D7 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				787A00DE1B8ACFB600810B9B /* AppDelegate.m in Sources */,
 				78D715651B8AD05A0001A1D7 /* XMPPRoomMemoryStorage.m in Sources */,
@@ -1637,7 +1729,6 @@
 				78D715631B8AD05A0001A1D7 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				78D7158E1B8AD05A0001A1D7 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				78D7154A1B8AD05A0001A1D7 /* XMPPGoogleSharedStatus.m in Sources */,
-				787A00E41B8ACFB600810B9B /* ViewController.m in Sources */,
 				78D715931B8AD05A0001A1D7 /* XMPPPresence+XEP_0172.m in Sources */,
 				78D715691B8AD05A0001A1D7 /* XMPPMUC.m in Sources */,
 				78D715941B8AD05A0001A1D7 /* XMPPMessage+XEP_0184.m in Sources */,
@@ -1655,6 +1746,7 @@
 				78D715351B8AD05A0001A1D7 /* XMPPPlainAuthentication.m in Sources */,
 				78D715B51B8AD05A0001A1D7 /* DDContextFilterLogFormatter.m in Sources */,
 				78D7159B1B8AD05A0001A1D7 /* XMPPPing.m in Sources */,
+				78D715EA1B8AF0F10001A1D7 /* MainTabBarController.m in Sources */,
 				78D715381B8AD05A0001A1D7 /* XMPPXOAuth2Google.m in Sources */,
 				78D715581B8AD05A0001A1D7 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				78D715951B8AD05A0001A1D7 /* XMPPMessageDeliveryReceipts.m in Sources */,
@@ -1671,8 +1763,10 @@
 				78D7157E1B8AD05A0001A1D7 /* XMPPMessage+XEP_0066.m in Sources */,
 				78D715AC1B8AD05A0001A1D7 /* XMPPSRVResolver.m in Sources */,
 				78D7157D1B8AD05A0001A1D7 /* XMPPIQ+XEP_0066.m in Sources */,
+				78D715E41B8AF0850001A1D7 /* ViewController.m in Sources */,
 				78D7157A1B8AD05A0001A1D7 /* XMPPIQ+XEP_0060.m in Sources */,
 				78D7154C1B8AD05A0001A1D7 /* XMPPReconnect.m in Sources */,
+				78D715F01B8AF47D0001A1D7 /* LoginViewController.m in Sources */,
 				78D715B61B8AD05A0001A1D7 /* DDDispatchQueueLogFormatter.m in Sources */,
 				78D715611B8AD05A0001A1D7 /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				78D7156F1B8AD05A0001A1D7 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
@@ -1770,6 +1864,7 @@
 				787A00E61B8ACFB600810B9B /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		787A00EA1B8ACFB600810B9B /* LaunchScreen.xib */ = {

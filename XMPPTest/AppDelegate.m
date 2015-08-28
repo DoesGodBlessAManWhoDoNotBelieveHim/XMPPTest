@@ -34,6 +34,7 @@
     [DDLog addLogger:logger withLogLevel:XMPP_LOG_FLAG_SEND_RECV];
     // DDLog 支持输出信息类型的颜色配置，是日志信息类型分明
     
+    [logger setColorsEnabled:YES];
     [logger setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:XMPP_LOG_FLAG_RECV_POST];
     [logger setForegroundColor:[UIColor grayColor] backgroundColor:nil forFlag:XMPP_LOG_FLAG_SEND];
     

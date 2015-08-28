@@ -12,4 +12,10 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#define kXMPP_HOST @"127.0.0.1"
+#define KXMPP_PORT 5222
+#ifdef __OBJC__
+    #import "XMPPFramework.h"
+    #import "AppDelegate.h"
+#endif
 #endif

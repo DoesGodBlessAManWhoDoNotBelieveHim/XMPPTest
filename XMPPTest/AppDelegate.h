@@ -20,6 +20,17 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
++ (AppDelegate *)aplicationDelegate;
+
+
+
+
+
+
+@property (nonatomic,strong) XMPPStream *xmppStream;
+-(void)loginWithJID:(XMPPJID *)aJID addPassword:(NSString *)password;
+- (void)goOnline;
+- (void)goOffline;
 
 @end
 

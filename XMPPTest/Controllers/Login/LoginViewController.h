@@ -10,4 +10,14 @@
 
 @interface LoginViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *headIV;
+@property (strong, nonatomic) IBOutlet UITextField *userNameTF;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTF;
+
+
+
+- (IBAction)loginAction;
+
+
+- (IBAction)newCustomerAction;
 @end

@@ -8,15 +8,35 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "DDLog.h"
+#import "DDTTYLogger.h"
+#import "XMPPLogging.h"
+
+@interface AppDelegate ()<XMPPStreamDelegate>{
+    NSString *_password;
+}
 
 @end
 
 @implementation AppDelegate
 
++ (AppDelegate *)aplicationDelegate{
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // level 有很多种 debug info warn verbose
+    DDTTYLogger *logger = [DDTTYLogger sharedInstance];
+    [DDLog addLogger:logger withLogLevel:XMPP_LOG_LEVEL_VERBOSE];
+    [DDLog addLogger:logger withLogLevel:XMPP_LOG_FLAG_SEND_RECV];
+    // DDLog 支持输出信息类型的颜色配置，是日志信息类型分明
+    
+    [logger setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:XMPP_LOG_FLAG_RECV_POST];
+    [logger setForegroundColor:[UIColor grayColor] backgroundColor:nil forFlag:XMPP_LOG_FLAG_SEND];
+    
     return YES;
 }
 
@@ -122,6 +142,76 @@
             abort();
         }
     }
+}
+
+- (XMPPStream *)xmppStream{
+    if (!_xmppStream) {
+        _xmppStream = [[XMPPStream alloc]init];
+        
+        [_xmppStream setHostName:kXMPP_HOST];
+        [_xmppStream setHostPort:KXMPP_PORT];
+        [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    }
+    return _xmppStream;
+}
+
+-(void)loginWithJID:(XMPPJID *)aJID addPassword:(NSString *)password{
+    [self.xmppStream setMyJID:aJID];
+    _password = password;
+    [self.xmppStream connectWithTimeout:-1 error:nil];
+}
+
+- (void)goOnline{
+    XMPPPresence *presence = [XMPPPresence presence];
+    // 若要发送复杂的persence
+    /*
+     <presence type="availabel">
+        <status>忙碌</status>         自定义
+        <show>xa</show>               只能跟固定的值
+     </presence>
+     */
+    [presence addChild:[DDXMLNode elementWithName:@"status" stringValue:@"忙碌"]];
+    [presence addChild:[DDXMLNode elementWithName:@"show" stringValue:@"dnd"]];
+    [self.xmppStream sendElement:presence];
+}
+
+- (void)goOffline{
+    
+}
+
+#pragma mark - XMPPStream Delegate
+// socket 连接建立成功
+- (void)xmppStream:(XMPPStream *)sender socketDidConnect:(GCDAsyncSocket *)socket{
+    NSLog(@"socketDidConnect");
+    NSError *error;
+    //[self.xmppStream authenticateWithPassword:_password error:&error];
+    if (error) {
+        NSLog(@"%@",error);
+    }
+}
+
+// xml流初始化成功
+- (void)xmppStreamDidConnect:(XMPPStream *)sender{
+    NSLog(@"xmppStreamDidConnect");
+     NSError *error;
+    
+    [self.xmppStream authenticateWithPassword:_password error:&error];
+}
+
+/**
+ * This method is called after authentication has successfully finished.
+ * If authentication fails for some reason, the xmppStream:didNotAuthenticate: method will be called instead.
+ **/
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
+    NSLog(@"登录成功");
+    [self goOnline];
+}
+
+/**
+ * This method is called if authentication fails.
+ **/
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error{
+    NSLog(@"登录失败");
 }
 
 @end

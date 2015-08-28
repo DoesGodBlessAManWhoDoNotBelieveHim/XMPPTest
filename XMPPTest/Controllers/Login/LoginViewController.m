@@ -34,4 +34,10 @@
 }
 */
 
+- (IBAction)loginAction {
+    [[AppDelegate aplicationDelegate]loginWithJID:[XMPPJID jidWithString:@"zhangjing@im.mine.cn" resource:@"iOS"] addPassword:@"zhangjing"];
+}
+
+- (IBAction)newCustomerAction {
+}
 @end

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AC4E6C7D-43CA-47C1-905E-73804F0417C6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>XMPPTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DFC9CB6599AE5F5726683EE6FBCA335D71094472</key>
 		<string>https://github.com/DoesGodBlessAManWhoDoNotBelieveHim/XMPPTest.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>XMPPTest.xcodeproj/project.xcworkspace</string>
+	<string>XMPPTest.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DFC9CB6599AE5F5726683EE6FBCA335D71094472</key>
